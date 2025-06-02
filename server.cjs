@@ -11,7 +11,14 @@ const PORT = process.env.PORT || 3001;
 const DB_PATH = path.join(__dirname, 'courses.db');
 
 // --- Middleware ---
-app.use(cors());
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://catalogomude-git-main-yangrandezas-projects.vercel.app'] 
+    : ['http://localhost:5173', 'http://192.168.1.11:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Log requested static file path for debugging

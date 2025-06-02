@@ -1,6 +1,6 @@
 import { Course, CourseFormData } from '@/types';
 
-const API_BASE_URL = 'http://192.168.1.11:3001/api'; // Backend server URL using network IP
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'; // Use environment variable or default to relative path
 
 // Helper to construct full URLs for files served by the backend
 const constructFullFileUrl = (filePath: string | null | undefined): string | null => {

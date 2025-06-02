@@ -7,8 +7,8 @@ const OPFS_DIR = 'scorm-courses';
 const METADATA_FILE = 'metadata.json';
 const CATEGORIES_FILE = 'categories.json';
 const CHUNK_SIZE = 1024 * 1024; // 1MB chunks for streaming
-// Added backend base URL for network access
-const BACKEND_BASE_URL = 'http://192.168.1.11:3001'; // Replace with your network IP if needed
+// Use environment variable or default to relative path
+const BACKEND_BASE_URL = import.meta.env.VITE_API_URL || '';
 
 // Helper function to ensure the OPFS directory exists
 const ensureDirectory = async (): Promise<FileSystemDirectoryHandle> => {
