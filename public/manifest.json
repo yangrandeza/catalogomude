@@ -1,0 +1,39 @@
+{
+  "name": "SCORM Course Viewer",
+  "short_name": "SCORM Viewer",
+  "description": "Aplicativo para demonstração de cursos SCORM",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/screenpc.png",
+      "sizes": "1918x1078",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tela do aplicativo em desktop"
+    },
+    {
+      "src": "/icons/screenmobile.png",
+      "sizes": "371x812",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tela do aplicativo em dispositivos móveis"
+    }
+  ]
+}
